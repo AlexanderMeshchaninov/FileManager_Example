@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+        <RootNamespace>FileManager.Runner</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Remove="App.config" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="App.config">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\FileManager.CommonLogic.CommandLine\FileManager.CommonLogic.CommandLine.csproj" />
+      <ProjectReference Include="..\FileManager.CommonLogic.Facades\FileManager.CommonLogic.Facades.csproj" />
+      <ProjectReference Include="..\FileManager.CommonLogic.InformationProvider\FileManager.CommonLogic.InformationProvider.csproj" />
+      <ProjectReference Include="..\FileManager.CommonLogic.Rendering\FileManager.CommonLogic.Rendering.csproj" />
+      <ProjectReference Include="..\FileManager.CommonLogic.Settings\FileManager.CommonLogic.Settings.csproj" />
+      <ProjectReference Include="..\FileManager.CommonLogic.Constructor\FileManager.CommonLogic.Constructor.csproj" />
+      <ProjectReference Include="..\FileManager.Core\FileManager.Core.csproj" />
+      <ProjectReference Include="..\FileManager.Data.CommandRepository\FileManager.Data.CommandRepository.csproj" />
+      <ProjectReference Include="..\FileManager.Data.CommandStorage\FileManager.Data.CommandStorage.csproj" />
+      <ProjectReference Include="..\FileManager.Packages.Autofac\FileManager.Packages.Autofac.csproj" />
+      <ProjectReference Include="..\FileManager.Packages.ConfigurationManager\FileManager.Packages.ConfigurationManager.csproj" />
+      <ProjectReference Include="..\FileManager.Packages.Serilog\FileManager.Packages.Serilog.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
+    </ItemGroup>
+
+</Project>

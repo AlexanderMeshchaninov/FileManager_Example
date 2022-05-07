@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\FileManager.Core\FileManager.Core.csproj" />
+      <ProjectReference Include="..\FileManager.Packages.Serilog\FileManager.Packages.Serilog.csproj" />
+    </ItemGroup>
+
+</Project>
